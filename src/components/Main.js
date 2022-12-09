@@ -10,9 +10,6 @@ const Main = ({ open, transformValue, clickHandler, children }) => {
           : { transform: "translateX(0px)" }
       }
     >
-      <button className="btn-right" onClick={clickHandler}>
-        ok
-      </button>
       <div>{children}</div>
     </div>
   );

@@ -1,16 +1,8 @@
 import React from "react";
 
 import { AiOutlineClose } from "react-icons/ai";
-import { TbSquarePlus } from "react-icons/tb";
 import { BsPlusSquare } from "react-icons/bs";
-import {
-  HiOutlinePlusCircle,
-  HiMail,
-  HiUser,
-  HiKey,
-  HiCube,
-} from "react-icons/hi";
-import Row from "./Row";
+import Row from "./ModalRow";
 
 export default function Modal({ setOpenModal, open, transformValue }) {
   return (
@@ -69,7 +61,12 @@ export default function Modal({ setOpenModal, open, transformValue }) {
               <div className="model-footer">
                 <button className="btn add-user-btn">Add new user input</button>
                 <div className="take-actions">
-                  <button className="btn cancel-btn">Cancel</button>
+                  <button
+                    className="btn cancel-btn"
+                    onClick={() => setOpenModal(false)}
+                  >
+                    Cancel
+                  </button>
                   <button className="btn add-btn">Add</button>
                 </div>
               </div>

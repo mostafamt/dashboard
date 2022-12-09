@@ -1,12 +1,8 @@
 import React from "react";
 
 import { FaUsers } from "react-icons/fa";
-
-import { Button, Table } from "antd";
-
 import { RiArrowDownSLine } from "react-icons/ri";
-
-import ITable from "./ITable";
+import Table from "./Table";
 import Modal from "./Modal";
 
 const Content = ({ open, transformValue }) => {
@@ -50,7 +46,7 @@ const Content = ({ open, transformValue }) => {
         </div>
       </div>
       <div>
-        <ITable />
+        <Table />
       </div>
       <div>
         {showModal && (

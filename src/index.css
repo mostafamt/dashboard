@@ -58,15 +58,6 @@ html {
     font-size: 62.5%;
   }
 }
-/* @media only screen and (max-width: 600px) {
-  html {
-    font-size: 50%;
-  }
-} */
-
-/* @media only screen and (max-width: 900px) {
-  font-size: 50%;
-} */
 
 body {
   margin: 0;
@@ -101,6 +92,20 @@ a {
 .active {
   border: 2px solid #ff007a;
   color: #ff007a;
+  border-radius: 2rem;
+}
+
+li {
+  border: 2px solid transparent;
+  transition: none;
+  transition-delay: 0;
+  transform: none;
+}
+
+.list li:hover {
+  border-color: #ff007a;
+  color: var(--pink-dark);
+  cursor: pointer;
   border-radius: 2rem;
 }
 
@@ -163,37 +168,6 @@ a {
 .dashboard-navbar .list {
   height: 100%;
 }
-
-.btn-left {
-  position: absolute;
-  right: 0;
-  top: 120px;
-  color: red;
-  transform: translateX(50%);
-  z-index: 1000;
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
-  /* border: 1px solid black; */
-  border-radius: 50%;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-/* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-.btn-right {
-  position: absolute;
-  left: 0;
-  top: 120px;
-  color: red;
-  transform: translateX(-50%);
-  font-size: 2rem;
-  color: transparent;
-}
-
-.btn-left .right-arrow-icon {
-  font-size: 18px;
-}
-
 /****************************/
 
 @media only screen and (max-width: 900px) {
@@ -506,4 +480,55 @@ th.ant-table-cell:last-child {
   background-color: var(--grey-border);
   border: 2px solid var(--grey-border);
   color: #fff;
+}
+
+.free-div {
+  position: fixed;
+  left: 285px;
+  top: 200px;
+  border: 1px solid black;
+  cursor: pointer;
+  z-index: 2000;
+}
+
+.btn-free {
+  position: fixed;
+  left: 290px;
+  top: 95px;
+  cursor: pointer;
+  z-index: 2000;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media only screen and (max-width: 900px) {
+  .btn-free {
+    display: none;
+  }
+}
+
+.btn-free .right-arrow-icon {
+  color: var(--pink-dark);
+  font-size: 18px;
+}
+
+.free-div:hover {
+  background-color: red;
+}
+
+.modal .delete-btn {
+  width: 25px;
+  height: 22px;
+  margin: auto 0.5rem;
+  border: 1px solid var(--pink-dark);
+  border-radius: 5px;
+}
+
+.modal .delete-icon {
+  color: var(--pink-dark);
+  font-size: 1.2rem;
+  /* stroke-width: 2px; */
 }

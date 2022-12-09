@@ -1,7 +1,5 @@
 import React from "react";
 
-import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
-
 const Drawer = ({ open, transformValue, clickHandler, children }) => {
   return (
     <nav
@@ -12,13 +10,6 @@ const Drawer = ({ open, transformValue, clickHandler, children }) => {
           : { transform: "translateX(0px)" }
       }
     >
-      <button className="btn-left" onClick={clickHandler}>
-        {open ? (
-          <RiArrowLeftSLine className="right-arrow-icon" />
-        ) : (
-          <RiArrowRightSLine className="right-arrow-icon" />
-        )}
-      </button>
       {children}
     </nav>
   );

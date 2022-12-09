@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, Radio, Table } from "antd";
+import { Radio, Table as AntTable } from "antd";
 
 import { columns, dataSource } from "./data";
 
@@ -17,7 +17,7 @@ const rowSelection = {
   }),
 };
 
-const ITable = () => {
+const Table = () => {
   const [selectionType, setSelectionType] = React.useState("checkbox");
 
   return (
@@ -29,7 +29,7 @@ const ITable = () => {
         value={selectionType}
       ></Radio.Group>
       {/* <Divider /> */}
-      <Table
+      <AntTable
         bordered
         pagination={{ position: ["bottomCenter"] }}
         rowSelection={{
@@ -42,4 +42,4 @@ const ITable = () => {
   );
 };
 
-export default ITable;
+export default Table;

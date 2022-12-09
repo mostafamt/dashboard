@@ -18,17 +18,31 @@ const Navbar = () => {
       </Link>
       <div className="list flex flex-col">
         <ul className="list-1 mb-auto">
-          <li className="py-4 px-8">Home</li>
+          <li className="py-3 my-2 px-8">
+            <Link>Home</Link>
+          </li>
           <hr />
-          <li className="py-4 px-8">Products data</li>
-          <li className="py-4 px-8">Brands & Branches</li>
-          <li className="py-4 px-8">Customers</li>
-          <li className="active py-4 px-8">Users</li>
+          <li className="py-3 my-2 px-8">
+            <Link>Products data</Link>
+          </li>
+          <li className="py-3 my-2 px-8">
+            <Link>Brands & Branches</Link>
+          </li>
+          <li className="py-3 my-2 px-8">
+            <Link>Customers</Link>
+          </li>
+          <li className="active py-3 my-2 px-8">
+            <Link>Users</Link>
+          </li>
         </ul>
 
         <ul className="list-2">
-          <li className="py-4 px-8">Settings</li>
-          <li className="py-4 px-8">Notification & Updates</li>
+          <li className="py-3 my-2 px-8">
+            <Link>Settings</Link>
+          </li>
+          <li className="py-4 px-8">
+            <Link className="link">Notification & Updates</Link>
+          </li>
         </ul>
       </div>
     </div>
