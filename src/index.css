@@ -299,6 +299,9 @@ li {
 /******************************/
 
 /************ Modal ************/
+.modal-header {
+  border-bottom: 1px solid var(--grey-light);
+}
 
 .modal-header-title {
   font-weight: bold;
@@ -357,7 +360,7 @@ li {
 }
 
 .box-hline {
-  width: 2.5rem;
+  width: 4.5rem;
   height: 2rem;
   margin-left: 1.5rem;
   transform: translateX(-50%);
@@ -385,6 +388,7 @@ li {
   border-left: 0;
   outline: 0;
   width: 90%;
+  border-radius: 0 5px 5px 0;
 }
 
 /******************************/
@@ -466,54 +470,61 @@ th.ant-table-cell:last-child {
   border: 5px solid green;
 } */
 
-.model-footer {
-  /* border-top: 1px solid black; */
+.modal-footer {
+  border-top: 1px solid var(--grey-light);
   display: flex;
   justify-content: space-between;
   padding: 1rem;
 }
 
-.model-footer .btn {
+.modal-footer .btn {
   /* border: 1px solid black; */
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
   width: 12rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
 }
 
-.model-footer .take-actions {
+.modal-footer .take-actions {
   display: flex;
   align-items: center;
 }
 
-.model-footer .take-actions button:first-child {
+.modal-footer .take-actions button:first-child {
   margin-right: 1rem;
 }
 
 @media only screen and (max-width: 600px) {
-  .model-footer .btn {
+  .modal-footer .btn {
     width: 8rem;
   }
 
-  .model-footer > .btn {
+  .modal-footer > .btn {
     width: 12rem;
   }
-}
-
-.add-user-btn,
-.cancel-btn,
-.add-btn {
-  border-radius: 1rem;
-  font-weight: 700;
 }
 
 .add-user-btn {
   background-color: var(--pink-light);
   border-color: var(--pink-light);
   border: 2px solid var(--pink-light);
+  color: var(--pink-dark);
+}
+
+.add-user-btn:hover {
+  border-color: var(--pink-dark);
+  background-color: var(--pink-dark);
+  color: var(--pink-light);
 }
 
 .cancel-btn {
   border: 2px solid var(--pink-dark);
   color: var(--pink-dark);
+}
+
+.cancel-btn:hover {
+  background-color: var(--pink-dark);
+  color: #fff;
 }
 
 .add-btn {
@@ -557,5 +568,4 @@ th.ant-table-cell:last-child {
 .modal .delete-icon {
   color: var(--pink-dark);
   font-size: 1.2rem;
-  /* stroke-width: 2px; */
 }

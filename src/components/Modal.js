@@ -36,8 +36,7 @@ export default function Modal({ setOpenModal, open, transformValue }) {
                   <AiOutlineClose className="modal-close-icon" />
                 </button>
               </div>
-              <hr />
-              <div className="modal-content p-4 overflow-y-scroll max-h-96">
+              <div className="modal-content py-4 px-8 overflow-y-scroll max-h-96">
                 <div className="modal-table-headers py-4">
                   <div></div>
                   <div>
@@ -71,8 +70,8 @@ export default function Modal({ setOpenModal, open, transformValue }) {
                   );
                 })}
               </div>
-              <hr />
-              <div className="model-footer">
+              {/* <hr /> */}
+              <div className="modal-footer">
                 <button
                   className="btn add-user-btn"
                   onClick={addUserInputHandler}

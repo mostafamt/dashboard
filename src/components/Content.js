@@ -3,7 +3,6 @@ import React from "react";
 import { FaUsers } from "react-icons/fa";
 import { RiArrowDownSLine } from "react-icons/ri";
 import Table from "./Table";
-import Modal from "./Modal";
 
 const Content = ({ open, transformValue, setShowModal }) => {
   return (

@@ -18,7 +18,7 @@ const Row = ({
       </div>
 
       <div
-        className="modal-table-row px-4 py-0 my-0"
+        className="modal-table-row"
         style={firstElement ? { marginTop: "1rem" } : { marginTop: "0" }}
       >
         <div className="row-number my-0">{displayNumber}</div>
