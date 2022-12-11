@@ -5,6 +5,18 @@ import { BsPlusSquare } from "react-icons/bs";
 import Row from "./ModalRow";
 
 export default function Modal({ setOpenModal, open, transformValue }) {
+  const [rowIndex, setRowIndex] = React.useState(3);
+  const [rows, setRows] = React.useState([0, 1, 2]);
+
+  const addUserInputHandler = () => {
+    setRows([...rows, rowIndex]);
+    setRowIndex((prevIndex) => prevIndex + 1);
+  };
+
+  const removeUserInputHandler = (value) => {
+    setRows((prevRows) => prevRows.filter((item) => item !== value));
+  };
+
   return (
     <>
       <div
@@ -32,8 +44,9 @@ export default function Modal({ setOpenModal, open, transformValue }) {
                 </button>
               </div>
               <hr />
-              <div className="modal-content p-4">
+              <div className="modal-content p-4 overflow-y-scroll max-h-96">
                 <div className="modal-table-headers p-4">
+                  <div></div>
                   <div>
                     <h5>Email</h5>
                     <p>Type this user's email, to add and contact later. </p>
@@ -53,13 +66,26 @@ export default function Modal({ setOpenModal, open, transformValue }) {
                     </p>
                   </div>
                 </div>
-                <Row />
-                <Row />
-                <Row />
+                {rows.map((el, idx) => {
+                  return (
+                    <Row
+                      key={el}
+                      number={el}
+                      displayNumber={idx + 1}
+                      firstElement={idx === 0}
+                      removeUserInputHandler={removeUserInputHandler}
+                    />
+                  );
+                })}
               </div>
               <hr />
               <div className="model-footer">
-                <button className="btn add-user-btn">Add new user input</button>
+                <button
+                  className="btn add-user-btn"
+                  onClick={addUserInputHandler}
+                >
+                  Add new user input
+                </button>
                 <div className="take-actions">
                   <button
                     className="btn cancel-btn"
