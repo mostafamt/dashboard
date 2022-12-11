@@ -19,16 +19,9 @@ export default function Modal({ setOpenModal, open, transformValue }) {
 
   return (
     <>
-      <div
-        className="fixed inset-0 z-10 overflow-y-auto"
-        style={
-          open
-            ? { width: `calc( 100% - ${transformValue}px)` }
-            : { width: "100%" }
-        }
-      >
+      <div className="fixed inset-0 z-10 overflow-y-auto">
         <div
-          className="fixed inset-0 w-full h-full bg-black opacity-40"
+          className="fixed inset-0 w-full h-full bg-black opacity-60"
           onClick={() => setOpenModal(false)}
         ></div>
         <div className="flex items-center min-h-screen px-4 py-8">
@@ -45,7 +38,7 @@ export default function Modal({ setOpenModal, open, transformValue }) {
               </div>
               <hr />
               <div className="modal-content p-4 overflow-y-scroll max-h-96">
-                <div className="modal-table-headers p-4">
+                <div className="modal-table-headers py-4">
                   <div></div>
                   <div>
                     <h5>Email</h5>

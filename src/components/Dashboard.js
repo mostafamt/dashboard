@@ -7,11 +7,13 @@ import Navbar from "./Navbar";
 import Content from "./Content";
 import Drawer from "./Drawer";
 import Main from "./Main";
+import Modal from "./Modal";
 
 const Dashboard = () => {
   const [open, setOpen] = React.useState(
     window.innerWidth < 900 ? false : true
   );
+  const [showModal, setShowModal] = React.useState(false);
   const [transformValue, setTransformValue] = React.useState(
     window.innerWidth < 900 ? 0 : 300
   );
@@ -49,6 +51,15 @@ const Dashboard = () => {
           <RiArrowRightSLine className="right-arrow-icon" />
         )}
       </button>
+      <div>
+        {showModal && (
+          <Modal
+            setOpenModal={setShowModal}
+            open={open}
+            transformValue={transformValue}
+          />
+        )}
+      </div>
       <Drawer
         open={open}
         transformValue={transformValue}
@@ -62,7 +73,11 @@ const Dashboard = () => {
         clickHandler={clickHandler}
       >
         <Header open={open} transformValue={transformValue} />
-        <Content open={open} transformValue={transformValue} />
+        <Content
+          open={open}
+          transformValue={transformValue}
+          setShowModal={setShowModal}
+        />
       </Main>
     </div>
   );

@@ -5,9 +5,7 @@ import { RiArrowDownSLine } from "react-icons/ri";
 import Table from "./Table";
 import Modal from "./Modal";
 
-const Content = ({ open, transformValue }) => {
-  const [showModal, setShowModal] = React.useState(false);
-
+const Content = ({ open, transformValue, setShowModal }) => {
   return (
     <div
       className="dashboard-content p-8"
@@ -47,15 +45,6 @@ const Content = ({ open, transformValue }) => {
       </div>
       <div>
         <Table />
-      </div>
-      <div>
-        {showModal && (
-          <Modal
-            setOpenModal={setShowModal}
-            open={open}
-            transformValue={transformValue}
-          />
-        )}
       </div>
     </div>
   );
